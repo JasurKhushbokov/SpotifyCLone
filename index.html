@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-sans overflow-x-hidden">
+    <div class="fixed left-0 top-0 h-screen w-60 bg-[#121212] text-white flex flex-col p-5 shadow-lg sm:w-60 md:block hidden sidebar"> <!-- Mobil uchun hidden, sm: dan ko'rinadi -->
+        <div class="flex items-center gap-x-3 mb-10">
+            <img src="Images/Spotify_icon.svg" alt="Spotify" class="w-8 h-8 object-contain"/>
+            <span class="text-xl font-bold tracking-wide">Spotify</span>
+        </div>
+        <nav class="space-y-2">
+            <a href="#" class="flex items-center gap-x-3 p-2 rounded-md hover:bg-[#1a1a1a] transition">
+                <i class="fa-solid fa-house text-lg"></i>
+                <span class="font-medium">Home</span>
+            </a>
+            <a href="#" class="flex items-center gap-x-3 p-2 rounded-md hover:bg-[#1a1a1a] transition">
+                <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                <span class="font-medium">Search</span>
+            </a>
+            <a href="#" class="flex items-center gap-x-3 p-2 rounded-md hover:bg-[#1a1a1a] transition">
+                <i class="fa-solid fa-book text-lg"></i>
+                <span class="font-medium">Your Library</span>
+            </a>
+        </nav>
+        <hr class="border-gray-700 my-5" />
+        <div class="space-y-2">
+            <a href="#" class="flex items-center gap-x-3 p-2 rounded-md hover:bg-[#1a1a1a] transition">
+                <i class="fa-solid fa-square-plus text-lg"></i>
+                <span class="font-medium">Create Playlist</span>
+            </a>
+            <a href="#" class="flex items-center gap-x-3 p-2 rounded-md hover:bg-[#1a1a1a] transition">
+                <i class="fa-solid fa-heart text-lg"></i>
+                <span class="font-medium">Liked Songs</span>
+            </a>
+        </div>
+        <div class="mt-auto text-xs text-gray-400 space-y-1 pt-6">
+            <a href="#" class="hover:underline block">Legal</a>
+            <a href="#" class="hover:underline block">Privacy Center</a>
+            <a href="#" class="hover:underline block">Cookies</a>
+        </div>
+    </div>
+
+    <div class="ml-0 sm:ml-60 min-h-screen">
+        <header class="bg-[#121212] text-white p-4 sticky top-0 z-40">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-house text-2xl cursor-pointer hover:text-green-500"></i>
+                </div>
+                <div class="relative flex-1 min-w-[200px] max-w-[400px] order-3 w-full sm:order-none">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input
+                        type="text"
+                        placeholder="What do you want to play?"
+                        class="w-full rounded-full bg-[#242424] pl-10 pr-4 py-2 text-sm md:text-base text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
+                    />
+                </div>
+                <div class="flex items-center gap-4 flex-wrap justify-center text-sm md:text-base">
+                    <a href="#" class="hover:underline">Premium</a>
+                    <a href="#" class="hover:underline">Support</a>
+                    <a href="#" class="hover:underline">Download</a>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i>
+                        <a href="#" class="hover:underline">Install app</a>
+                    </div>
+                    <a href="#" class="hover:underline">Sign up</a>
+                    <a href="#" class="rounded-full bg-white text-black font-semibold px-4 py-1 md:px-5 md:py-2 hover:scale-105 transition-transform duration-200">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="p-6">
+            <h1 class="text-3xl font-bold mb-6">Good Evening</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/dark-music-background-with-playing-dj-photo.jpg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 1</p>
+                    <p class="text-sm text-gray-400">Fourth Strike</p>
+                </div>
+
+                <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/elegant-musical-notes-music-chord-background_1017-20759.avif" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 2</p>
+                    <p class="text-sm text-gray-400">WILDFLOWER</p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/images.jpeg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 3</p>
+                    <p class="text-sm text-gray-400">Summertime Sadness</p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/istockphoto-1319479588-612x612.jpg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 4</p>
+                    <p class="text-sm text-gray-400">I Wanna Be Yours   </p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/music.jpeg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 5</p>
+                    <p class="text-sm text-gray-400">Harry Up Tomorrow</p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/poster-dj-with-headphones-front-man-wearing-hoodie_881941-9575.avif" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 6</p>
+                    <p class="text-sm text-gray-400">Graf Monte-Cristo</p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/dark-music-background-with-playing-dj-photo.jpg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 1</p>
+                    <p class="text-sm text-gray-400">YAMAKASI</p>
+                </div>
+
+                <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/elegant-musical-notes-music-chord-background_1017-20759.avif" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 2</p>
+                    <p class="text-sm text-gray-400">Fourth Strike</p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/images.jpeg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 3</p>
+                    <p class="text-sm text-gray-400">YAMAKASI</p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/istockphoto-1319479588-612x612.jpg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 4</p>
+                    <p class="text-sm text-gray-400">Harry Up Tomorrow</p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/music.jpeg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 5</p>
+                    <p class="text-sm text-gray-400">I Wanna Be Yours </p>
+                </div>
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/poster-dj-with-headphones-front-man-wearing-hoodie_881941-9575.avif" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
+                    <p class="font-semibold">Playlist 6</p>
+                    <p class="text-sm text-gray-400">Graf Monte-Cristo</p>
+                </div>  
+
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/poster-dj-with-headphones-front-man-wearing-hoodie_881941-9575.avif" alt="Playlist" class="w-40 h-40 object-cover rounded-full mb-2 mx-auto">
+                    <p class="font-semibold mx-auto">The Weeknd</p>
+                    <p class="text-sm text-gray-400 mx-auto">Description here</p>
+                </div>  
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/images.jpeg" alt="Playlist" class="w-40 h-40 object-cover rounded-full mb-2 mx-auto">
+                    <p class="font-semibold mx-auto">Billie English</p>
+                    <p class="text-sm text-gray-400 mx-auto">Artist</p>
+                </div>  
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/dark-music-background-with-playing-dj-photo.jpg" alt="Playlist" class="w-40 h-40 object-cover rounded-full mb-2 mx-auto">
+                    <p class="font-semibold mx-auto">JONY</p>
+                    <p class="text-sm text-gray-400 mx-auto">Artist</p>
+                </div>  
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/elegant-musical-notes-music-chord-background_1017-20759.avif" alt="Playlist" class="w-40 h-40 object-cover rounded-full mb-2 mx-auto">
+                    <p class="font-semibold mx-auto">xcho</p>
+                    <p class="text-sm text-gray-400 mx-auto">Artist</p>
+                </div>  
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/dark-music-background-with-playing-dj-photo.jpg" alt="Playlist" class="w-40 h-40 object-cover rounded-full mb-2 mx-auto">
+                    <p class="font-semibold mx-auto">MACAN</p>
+                    <p class="text-sm text-gray-400 mx-auto">Artist</p>
+                </div>  
+                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+                    <img src="Images/images.jpeg" alt="Playlist" class="w-40 h-40 object-cover rounded-full mb-2 mx-auto">
+                    <p class="font-semibold mx-auto">lana Del Reny</p>
+                    <p class="text-sm text-gray-400 mx-auto">Artist</p>
+                </div>  
+            </div>
+        </main>
+
+        <div class="footer-section bg-black text-white py-12 px-6 border-t border-gray-800">
+    <div class="footer max-w-7xl mx-auto">
+        <div class="footer-links grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="footer-column">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase mb-4">Company</h3>
+                <ul class="col-links space-y-3">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Jobs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">For the record</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase mb-4">Communities</h3>
+                <ul class="col-links space-y-3">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">For Artists</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Developers</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Advertising</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Investors</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase mb-4">Useful links</h3>
+                <ul class="col-links space-y-3">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Support</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Free Mobile App</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 flex gap-6">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="preview bg-black text-white py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text text-center md:text-left">
+            <h4 class="text-xl font-bold mb-2">Preview Spotify</h4>
+            <p class="text-sm text-gray-400">Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed</p>
+        </div>
+        <div class="button">
+            <button class="bg-white text-black font-semibold px-8 py-3 rounded-full hover:scale-105 transition-transform duration-200">
+                Sign Up Free
+            </button>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
