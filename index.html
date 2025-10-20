@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-black text-white font-sans overflow-x-hidden">
-    <div class="fixed left-0 top-0 h-screen w-60 bg-[#121212] text-white flex flex-col p-5 shadow-lg sm:w-60 md:block hidden sidebar"> <!-- Mobil uchun hidden, sm: dan ko'rinadi -->
+
+    <div class="fixed left-0 top-0 h-screen w-60 bg-[#121212] text-white flex flex-col p-5 shadow-lg sm:w-60 md:block hidden sidebar">
+
         <div class="flex items-center gap-x-3 mb-10">
             <img src="Images/Spotify_icon.svg" alt="Spotify" class="w-8 h-8 object-contain"/>
             <span class="text-xl font-bold tracking-wide">Spotify</span>
         </div>
+
         <nav class="space-y-2">
             <a href="#" class="flex items-center gap-x-3 p-2 rounded-md hover:bg-[#1a1a1a] transition">
                 <i class="fa-solid fa-house text-lg"></i>
@@ -28,7 +31,9 @@
                 <span class="font-medium">Your Library</span>
             </a>
         </nav>
+
         <hr class="border-gray-700 my-5" />
+
         <div class="space-y-2">
             <a href="#" class="flex items-center gap-x-3 p-2 rounded-md hover:bg-[#1a1a1a] transition">
                 <i class="fa-solid fa-square-plus text-lg"></i>
@@ -39,6 +44,7 @@
                 <span class="font-medium">Liked Songs</span>
             </a>
         </div>
+        
         <div class="mt-auto text-xs text-gray-400 space-y-1 pt-6">
             <a href="#" class="hover:underline block">Legal</a>
             <a href="#" class="hover:underline block">Privacy Center</a>
@@ -79,7 +85,7 @@
 
         <main class="p-6">
             <h1 class="text-3xl font-bold mb-6">Good Evening</h1>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
                     <img src="Images/dark-music-background-with-playing-dj-photo.jpg" alt="Playlist" class="w-full h-40 object-cover rounded-md mb-2">
                     <p class="font-semibold">Playlist 1</p>
